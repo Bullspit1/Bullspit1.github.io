@@ -46,7 +46,7 @@
     <form name="contactUsForm" action="https://httpbin.org/post" method="POST" onsubmit="return validForm();">
       <fieldset id="field">
         <legend>Contact Us</legend>
-        <label for="name">Name*:</label> <input type="text" name="entName" id="name" placeholder="Enter Name">
+        <label for="name">First Name*:</label> <input type="text" name="entName" id="name" placeholder="Enter Name">
         <div id="errName"></div>
         <br><br>
         <label for="email">Email*:</label> <input type="email" name="entEmail" id="email"
@@ -65,7 +65,7 @@
           <option value="Markham">Markham</option>
         </datalist>
         <div id="errCity"></div><br><br>
-        <label for="postal">Postal Code*:</label> <input type="text" name="entPostal" id="postal" placeholder="E3E 1H1"
+        <label for="postal">Postal Code*:</label> <input type="text" name="entPostal" id="postal" placeholder="E3E1H1"
           pattern="^([A-Za-z]\d[A-Za-z][-]?\d[A-Za-z]\d)">
         <div id="errPostal"></div><br><br>
         <div id="selectionAbout">
