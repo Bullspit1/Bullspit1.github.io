@@ -1,0 +1,254 @@
+/*
+  Name: Stephen Ditta
+  Student ID: 033787144
+  Proff: Muath Alzghool
+  Course Code: WEB222NCC
+*/
+
+/* Add any CSS you need to this file. */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+header {
+  width: 100%;
+  background-color: #945af9;
+}
+
+#logo h1 {
+  margin: 0;
+  font-family: 'Anton', sans-serif;
+  font-size: 1.5em;
+}
+
+#logo a {
+  display: inline-block;
+}
+
+#signinButton, #shoppingCartButton {
+  float: right;
+  margin-left: 20px;
+  top: 35%;
+}
+
+.itemsCart {
+  font-family: 'Anton', sans-serif;
+  font-size: 1em;
+  width: 90%;
+  margin-top: 0;
+}
+
+/*Navigation*/
+#main {
+  display: flex;
+  border-bottom: 1px solid black;
+  width: 90%;
+  margin: auto;
+  position: relative;
+}
+#categories {
+  margin-top: 60px;
+  display: inline-block;
+}
+
+#categories ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #6200ee;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#content {
+  width: 90%;
+  display: flex;
+  margin: auto;
+}
+
+#contentHead {
+  background-color: #f1e7ff;
+  min-height: 100%;
+}
+
+#itemContainer {
+  margin-top: 60px;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: max-content;
+  display: grid;
+}
+
+li {
+  padding: 20px 0;
+  text-align: center;
+  cursor: pointer;
+}
+
+li:hover {
+  background-color: #8543e0;
+}
+
+.selected {
+  background-color: lightgray;
+}
+
+#logo {
+  flex: 1 auto;
+}
+
+#row {
+  flex: 1 auto;
+}
+
+.card {
+  display: block;
+  text-align: center;
+  margin: 20px 40px;
+  border: 2px solid #945af9;
+}
+
+.uniqueImage {
+  width: 100%;
+  min-width: 400px;
+  height: 270px;
+  object-fit: cover;
+  vertical-align: middle;
+  cursor: pointer;
+  border-bottom: 3px solid #945af9;
+  display: none;
+}
+
+.itemName {
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.price {
+  font-family: 'Montserrat', sans-serif;
+  float: left;
+  margin: 0px 0px 15px 15px;
+}
+
+.addToCart {
+  display: block;
+  position: relative;
+  text-align: center;
+  margin: 5px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#rmvShp {
+  display: block;
+  text-align: center;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+.itemDescription {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+#boxContainer {
+  top: 22%;
+  width: 70%;
+  height: 50%;
+  margin: auto;
+  position: relative;
+}
+
+#box {
+  margin: auto;
+  max-width: 500px;
+  min-width: 500px;
+  height: 100%;
+  background-color: white;
+  position: relative;
+}
+
+#descPara {
+  display: block;
+  text-align: center;
+  margin-top: 50px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#exit {
+  display: block;
+  text-align: right;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  display: block;
+  background-color: #945af9;
+}
+
+.current {
+  background-color: #8543e0;
+}
+
+@media only screen and (max-width: 1780px) {
+  #itemContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  #itemContainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+
+/* Form CSS */
+
+#field {
+  border-color: #8543e0;
+  margin: auto;
+  width: 50%;
+  /* text-align: center; */
+  font-family: 'Montserrat', sans-serif;
+}
+
+textarea {
+   width: 100%;
+   height: 200px;
+}
+
+#subForm{
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  margin: auto;
+  flex: 1 auto;
+}
+
+
+div #errName, #errMsg, #errEmail, #errCity, #errPostal {
+  display: inline-block;
+}
+
+
+.error {
+  border-color: red;
+}

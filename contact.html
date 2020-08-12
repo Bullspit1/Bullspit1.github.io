@@ -1,0 +1,130 @@
+<!-- 
+  Name: Stephen Ditta
+  Student ID: 033787144
+  Proff: Muath Alzghool
+  Course Code: WEB222NCC
+ -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="style.css" />
+  <script type="text/javascript" src="./validation.js" rel="preload" as="script"></script>
+
+  <!--Material Design import-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet" />
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+
+  <!--Google fonts import-->
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+
+  <title>The Shoe Store</title>
+</head>
+
+<body>
+  <header>
+    <nav id="main">
+      <div id="logo">
+        <a href="./index.html">
+          <h1>The</h1>
+          <h1>Shoe</h1>
+          <h1>Store</h1>
+        </a>
+      </div>
+      <div id="row">
+        <button class="mdc-button mdc-button--raised" id="shoppingCartButton">Cart (0)</button>
+        <a href="#"><button class="mdc-button mdc-button--raised" id="signinButton">Contact Us</button></a>
+      </div>
+    </nav>
+  </header>
+
+  <div id="contentHead">
+    <form name="contactUsForm" action="https://httpbin.org/post" method="POST" onsubmit="return validForm();">
+      <fieldset id="field">
+        <legend>Contact Us</legend>
+        <label for="name">Name*:</label> <input type="text" name="entName" id="name" placeholder="Enter Name">
+        <div id="errName"></div>
+        <br><br>
+        <label for="email">Email*:</label> <input type="email" name="entEmail" id="email"
+          placeholder="example@email.com">
+        <div id="errEmail"></div><br><br>
+        <label>City*: </label><input list="cities" name="cities" id="city">
+        <datalist id="cities">
+          <option value="Toronto">Toronto</option>
+          <option value="Ottawa">Ottawa</option>
+          <option value="Montreal">Montreal</option>
+          <option value="Niagra Falls">Niagra Falls</option>
+          <option value="Hamilton">Hamilton</option>
+          <option value="Kitchener">Kitchener</option>
+          <option value="Quebec City">Quebec City</option>
+          <option value="Vaughan">Vaughan</option>
+          <option value="Markham">Markham</option>
+        </datalist>
+        <div id="errCity"></div><br><br>
+        <label for="postal">Postal Code*:</label> <input type="text" name="entPostal" id="postal" placeholder="E3E 1H1"
+          pattern="^([A-Za-z]\d[A-Za-z][-]?\d[A-Za-z]\d)">
+        <div id="errPostal"></div><br><br>
+        <div id="selectionAbout">
+          <label for="about">About:</label>
+          <input type="radio" name="about" id="quest" value="1" checked><label for="quest">Question</label>
+          <input type="radio" name="about" id="comm" value="2"><label for="comm">Comment</label>
+          <input type="radio" name="about" id="ordProb" value="3"><label for="ordProb">Order Problem</label>
+        </div>
+        <br><br>
+        <label for="message">Message*:</label>
+        <div id="errMsg"></div> <br>
+        <textarea id="message" name="mess" rows="4" cols="50" placeholder="Enter message here"></textarea>
+        <input type="hidden" name="myName" id="myName" value="Stephen Ditta">
+        <button class="mdc-button mdc-button--raised" type="submit" value="submit">
+          <span class="mdc-button__label">Submit</span>
+        </button>
+        <button class="mdc-button mdc-button--raised" type="reset" value="reset">
+          <span class="mdc-button__label">Clear</span>
+        </button>
+      </fieldset>
+    </form>
+  </div>
+
+  <footer>
+    <div id="main">
+      <div id="logo">
+        <a href="./index.html">
+          <h1>The</h1>
+          <h1>Shoe</h1>
+          <h1>Store</h1>
+        </a>
+      </div>
+      <form action="https://formspree.io/xdowjdbr" method="POST" id="subForm">
+        <label>Subscribe: </label>
+        <input type="email" name="_replyto">
+
+        <button class="mdc-button mdc-button--raised" type="submit" value="Send">
+          <span class="mdc-button__label">Send</span>
+        </button>
+        </label>
+      </form>
+      <a href="http://facebook.com" target="_blank" style="margin: auto;">
+        <span class="material-icons"
+          style="font-size: 50px; color: white; cursor: pointer; margin: auto 20px auto auto;">
+          facebook
+        </span>
+      </a>
+      <a href="http://twitter.com" target="_blank" style="margin: auto;">
+        <img src="./images/logos/Twitter_Logo_WhiteOnImage.svg" alt="Twitter"
+          style="width: 50px; height: 50px; color: white; cursor: pointer; margin: auto;" />
+      </a>
+    </div>
+  </footer>
+</body>
+
+</html>
+<!-- Images included from 
+https://www.pexels.com/search/shoes/
+
+Icons included from 
+https://material.io/develop/web/docs/getting-started
+ -->
